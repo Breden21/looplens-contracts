@@ -1,20 +1,28 @@
 {
-  "name": "looplens-contracts",
+  "name": "looplens-ai-agent",
   "version": "1.0.0",
-  "main": "index.js",
+  "description": "AI agent for LoopLens prediction markets",
+  "main": "src/index.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
-  "devDependencies": {
-    "@nomicfoundation/hardhat-toolbox": "^6.1.0",
-    "hardhat": "^2.26.3"
+    "start": "tsx src/index.ts",
+    "dev": "tsx watch src/index.ts",
+    "build": "tsc"
   },
   "dependencies": {
-    "@openzeppelin/contracts": "^5.4.0",
-    "dotenv": "^17.2.3"
+    "@coinbase/coinbase-sdk": "latest",
+    "@coinbase/cdp-agentkit-core": "latest",
+    "@langchain/openai": "^0.3.14",
+    "@langchain/core": "^0.3.19",
+    "axios": "^1.12.2",
+    "ethers": "^6.15.0",
+    "node-cron": "^4.2.1",
+    "dotenv": "^16.4.7"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "@types/node-cron": "^3.0.11",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.20.6",
+    "typescript": "^5.9.3"
   }
 }
